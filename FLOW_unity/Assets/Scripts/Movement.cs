@@ -14,8 +14,11 @@ public class Movement : MonoBehaviour
 
     public Material[] mat_sky;
 
+    public AudioSource cat;
+    public AudioClip jumpSound;
     private void Start()
     {
+        cat = GetComponent<AudioSource>();
         Player = GetComponent<Transform>();
         RenderSettings.skybox=mat_sky[Random.Range(0 , 5)];//create random skybox 1-5
     }
@@ -86,6 +89,7 @@ public class Movement : MonoBehaviour
         //Если свайп вверх и игрок на земле (позиция Y<=0)
         if (SwipeManager.swipeUp == true && Player.position.y <= 0f && up ==false)
         {
+            cat.PlayOneShot(jumpSound);
             up = true; //движение вверх = True
         }
         //Если движение вверх и не достиг предельной высоты

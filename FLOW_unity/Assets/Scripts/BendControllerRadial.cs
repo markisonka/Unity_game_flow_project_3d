@@ -34,6 +34,7 @@ public class BendControllerRadial : MonoBehaviour
 	
 	void Start() 
 	{
+		//Параметры шейдера
 		m_curveOriginId = Shader.PropertyToID("_CurveOrigin");
 		m_referenceDirectionId = Shader.PropertyToID("_ReferenceDirection");
 		m_curvatureId = Shader.PropertyToID("_Curvature");
@@ -49,6 +50,7 @@ public class BendControllerRadial : MonoBehaviour
 	
 	void Update() 
 	{
+		//Параметры шейдера из инспектора
 		m_scale.x = m_xScale;
 		m_scale.z = m_zScale;
 
@@ -73,12 +75,14 @@ public class BendControllerRadial : MonoBehaviour
 	
 	private void SetCurveOrigin()
 	{
+		//Позиция камеры
         m_curveOrigin = Camera.main.transform;
 	}
 	
 	
 	private void OnDisable()
 	{
+		//
 		Shader.SetGlobalVector(m_curveOriginId, Vector3.zero);
 		Shader.SetGlobalFloat(m_curvatureId, 0);
 	}
