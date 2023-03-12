@@ -6,8 +6,9 @@ using UnityEngine.UI;
 public class Coin : MonoBehaviour
 {
     private Score ScoreText;
-    public AudioClip collecibleClip;
+    public AudioClip collectClip;
     public AudioSource AppleSource;
+    private bool isActive = true;
     private void Start()
     {
         //Ищем объект ScoreText
@@ -18,13 +19,18 @@ public class Coin : MonoBehaviour
     private void Update()
     {
         gameObject.transform.Rotate(0, 0, 0.5f); //Яблоко крутится
+        if (!AppleSource.isPlaying && !isActive)
+            Destroy(gameObject);
     }
 
     //При касании яблока
     private void OnTriggerEnter(Collider other)
-    { 
-        ScoreText.ScorePlusOne(); //увеличиваем счет
-        AppleSource.PlayOneShot(collecibleClip);
-        Destroy(gameObject); //уничтожаем яблоко
+    {
+        if (isActive)
+        {
+            ScoreText.ScorePlusOne(); //увеличиваем счет
+            AppleSource.PlayOneShot(collectClip);
+        }
+        isActive = false;
     }
 }

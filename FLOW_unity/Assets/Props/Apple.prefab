@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 2654836902291847595}
   - component: {fileID: 2654836902288456075}
   - component: {fileID: 2654836902289554251}
-  - component: {fileID: 2654836902805800176}
   - component: {fileID: 3167307417323851372}
   - component: {fileID: 347284345697455302}
+  - component: {fileID: 5069092424821964174}
   m_Layer: 0
   m_Name: Apple
   m_TagString: Untagged
@@ -89,20 +89,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &2654836902805800176
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2654836902291809675}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a898afb8672de948b2015e3ea1e1801, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  starFX: {fileID: 8300000, guid: 62c15b4aac9d60e4a963f4f55d31e706, type: 3}
-  starFX1: {fileID: 347284345697455302}
 --- !u!65 &3167307417323851372
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -128,7 +114,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.172
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -212,6 +198,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &5069092424821964174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2654836902291809675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a898afb8672de948b2015e3ea1e1801, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collectClip: {fileID: 8300000, guid: 62c15b4aac9d60e4a963f4f55d31e706, type: 3}
+  AppleSource: {fileID: 347284345697455302}
 --- !u!1001 &1686376332461616634
 PrefabInstance:
   m_ObjectHideFlags: 0

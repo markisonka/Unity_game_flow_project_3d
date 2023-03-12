@@ -728,7 +728,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f5c434448aebf6d419639801f8cb1fb3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.03
+      value: -5.85
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f5c434448aebf6d419639801f8cb1fb3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -986,7 +986,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f5c434448aebf6d419639801f8cb1fb3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.02
+      value: -7.84
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f5c434448aebf6d419639801f8cb1fb3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1579,6 +1579,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7233996520225180197}
     m_Modifications:
+    - target: {fileID: 347284345697455302, guid: aacc89bda3fb47b48bcd5cb162948c23, type: 3}
+      propertyPath: m_Volume
+      value: 0.135
+      objectReference: {fileID: 0}
+    - target: {fileID: 347284345697455302, guid: aacc89bda3fb47b48bcd5cb162948c23, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 347284345697455302, guid: aacc89bda3fb47b48bcd5cb162948c23, type: 3}
+      propertyPath: MaxDistance
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 347284345697455302, guid: aacc89bda3fb47b48bcd5cb162948c23, type: 3}
+      propertyPath: MinDistance
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 347284345697455302, guid: aacc89bda3fb47b48bcd5cb162948c23, type: 3}
+      propertyPath: spreadCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2654836902291809675, guid: aacc89bda3fb47b48bcd5cb162948c23, type: 3}
       propertyPath: m_Name
       value: Apple
@@ -1647,9 +1667,13 @@ PrefabInstance:
       propertyPath: spreadCustomCurve.m_Curve.Array.data[0].value
       value: 0.8972222
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2654836902805800176, guid: aacc89bda3fb47b48bcd5cb162948c23, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aacc89bda3fb47b48bcd5cb162948c23, type: 3}
+--- !u!82 &5057173566190219051 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 347284345697455302, guid: aacc89bda3fb47b48bcd5cb162948c23, type: 3}
+  m_PrefabInstance: {fileID: 4827715682585715693}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7361307094742009446 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2654836902291809675, guid: aacc89bda3fb47b48bcd5cb162948c23, type: 3}
@@ -1662,13 +1686,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7361307094742009446}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4a898afb8672de948b2015e3ea1e1801, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collecibleClip: {fileID: 0}
-  AppleSource: {fileID: 0}
+  collectClip: {fileID: 8300000, guid: 553f1d03da54003479f6ff63d3155919, type: 3}
+  AppleSource: {fileID: 5057173566190219051}
 --- !u!4 &7361307094742374982 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2654836902291847595, guid: aacc89bda3fb47b48bcd5cb162948c23, type: 3}
@@ -2543,7 +2567,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f5c434448aebf6d419639801f8cb1fb3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.96
+      value: -9.78
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f5c434448aebf6d419639801f8cb1fb3, type: 3}
       propertyPath: m_LocalPosition.y
