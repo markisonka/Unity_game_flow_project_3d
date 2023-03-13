@@ -5,12 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class Collision : MonoBehaviour
 {
+    public GameObject var2;
     private void OnTriggerEnter(Collider other)
     {
         //Если касаемся препятствия, перезапускаем сцену
         if(other.tag == "Obstacle")
         {
-            SceneManager.LoadScene("Main");//TO DO: менюшку
+            var2.GetComponent<EndRunSequence>().enabled = true;
+            //SceneManager.LoadScene("Main");//TO DO: менюшку
         }
     }
 }

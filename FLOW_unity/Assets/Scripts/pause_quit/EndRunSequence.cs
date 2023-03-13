@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class EndRunSequence : MonoBehaviour
 {
-    public GameObject liveStars;
-    public GameObject liveDis;
     public GameObject endScreen;
 
     void Start()
@@ -15,9 +13,7 @@ public class EndRunSequence : MonoBehaviour
 
     IEnumerator EndSequence()
     {
-        yield return new WaitForSeconds(2);
-        liveStars.SetActive(false);
-        liveDis.SetActive(false);
+        yield return new WaitForSeconds(0);
         endScreen.SetActive(true);
 
         Time.timeScale = 0f;

@@ -14,7 +14,6 @@ public class QuitScene : MonoBehaviour
     public GameObject catModel;
     public GameObject decorations;
     public GameObject bgm;
-    public GameObject light;
     public GameObject footPath;
     public GameObject hearts;
     public GameObject pauseButton;
@@ -52,7 +51,6 @@ public class QuitScene : MonoBehaviour
         catModel.SetActive(false);
         decorations.SetActive(false);
         bgm.SetActive(false);
-        light.SetActive(false);
         footPath.SetActive(false);
         hearts.SetActive(false);
         pauseButton.SetActive(false);

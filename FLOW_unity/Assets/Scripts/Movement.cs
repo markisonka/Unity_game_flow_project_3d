@@ -20,7 +20,7 @@ public class Movement : MonoBehaviour
     {
         cat = GetComponent<AudioSource>();
         Player = GetComponent<Transform>();
-        RenderSettings.skybox=mat_sky[Random.Range(0 , 5)];//create random skybox 1-5
+        RenderSettings.skybox=mat_sky[Random.Range(0 , 5)];//Создать случайно небо
     }
 
     private void Update()
@@ -108,7 +108,7 @@ public class Movement : MonoBehaviour
         }
 
 
-        RenderSettings.skybox.SetFloat("_Rotation", Time.time * 5.0f); //rotate skybox
+        RenderSettings.skybox.SetFloat("_Rotation", Time.time * 5.0f); //Вращение неба
 
         
         
