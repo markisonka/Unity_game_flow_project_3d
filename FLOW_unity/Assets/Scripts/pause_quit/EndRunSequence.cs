@@ -5,6 +5,7 @@ using UnityEngine;
 public class EndRunSequence : MonoBehaviour
 {
     public GameObject endScreen;
+    public GameObject PauseButton;
 
     void Start()
     {
@@ -15,6 +16,7 @@ public class EndRunSequence : MonoBehaviour
     {
         yield return new WaitForSeconds(0);
         endScreen.SetActive(true);
+        PauseButton.SetActive(false);
 
         Time.timeScale = 0f;
     }

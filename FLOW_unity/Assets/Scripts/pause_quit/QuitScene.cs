@@ -12,14 +12,9 @@ public class QuitScene : MonoBehaviour
 
     public GameObject loadingScreen;
     public GameObject catModel;
-    public GameObject decorations;
     public GameObject bgm;
-    public GameObject footPath;
-    public GameObject hearts;
     public GameObject pauseButton;
     public GameObject starDisplay;
-    public GameObject distanceDisplay;
-    public GameObject x2Picture;
 
     public Slider slider;
     public Camera mainCam;
@@ -28,12 +23,14 @@ public class QuitScene : MonoBehaviour
     {
         pauseScreen.SetActive(false);
         leaveScreen.SetActive(true);
+        pauseButton.SetActive(false);
     }
 
     public void Stay()
     {
         pauseScreen.SetActive(true);
         leaveScreen.SetActive(false);
+        pauseButton.SetActive(true);
     }
 
     public void Quit()
@@ -49,16 +46,11 @@ public class QuitScene : MonoBehaviour
         loadingScreen.SetActive(true);
 
         catModel.SetActive(false);
-        decorations.SetActive(false);
         bgm.SetActive(false);
-        footPath.SetActive(false);
-        hearts.SetActive(false);
         pauseButton.SetActive(false);
         starDisplay.SetActive(false);
-        distanceDisplay.SetActive(false);
-        x2Picture.SetActive(false);
 
-        
+
 
         while (!operation.isDone)
         {

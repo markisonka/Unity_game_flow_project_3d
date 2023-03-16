@@ -60,7 +60,7 @@ public class Movement : MonoBehaviour
             Lane3 = false;
         }
         //Если свайп влево и линия 2 занята и позиция игрока слева или по центру
-        else if (SwipeManager.swipeLeft == true && Lane2 == true && Player.position.z <= 0.2f)
+        else if (SwipeManager.swipeLeft == true  && Lane2 == true && Player.position.z <= 0.2f)
         {
             //То теперь линия 1 занята, линия 2 и 3 свободны
             Lane1 = true;

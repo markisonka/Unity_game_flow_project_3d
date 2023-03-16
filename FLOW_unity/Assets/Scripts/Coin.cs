@@ -20,7 +20,7 @@ public class Coin : MonoBehaviour
     {
         gameObject.transform.Rotate(0, 0, 0.5f); //Яблоко крутится
         if (!AppleSource.isPlaying && !isActive)
-            Destroy(gameObject);
+            this.gameObject.SetActive(false);
     }
 
     //При касании яблока

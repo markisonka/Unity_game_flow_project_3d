@@ -10,10 +10,7 @@ public class RetryScene : MonoBehaviour
     public void ResetTheGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-
         Time.timeScale = 1;
-
-        charModel.GetComponent<Animator>().Play("Entry");
     }
 
 }
