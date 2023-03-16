@@ -35,6 +35,7 @@ public class QuitScene : MonoBehaviour
 
     public void Quit()
     {
+        leaveScreen.SetActive(false);
         StartCoroutine(LoadSceneAsync());
         Time.timeScale = 1;
     }
@@ -42,13 +43,14 @@ public class QuitScene : MonoBehaviour
     IEnumerator LoadSceneAsync()
     {
         AsyncOperation operation = SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex - 1);
-
+        
         loadingScreen.SetActive(true);
 
         catModel.SetActive(false);
         bgm.SetActive(false);
         pauseButton.SetActive(false);
         starDisplay.SetActive(false);
+        
 
 
 
